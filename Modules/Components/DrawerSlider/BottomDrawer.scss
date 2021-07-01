@@ -1,0 +1,63 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-bottom-drawer';
+
+#{$c} {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  bottom: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 5;
+
+  &.is-closed {
+
+    .c-bottom-drawer__main {
+      transform: translateY(100%);
+    }
+  }
+
+  &.is-open {
+    pointer-events: auto;
+
+    .c-bottom-drawer__main {
+      transform: translateY(0);
+      z-index: 6;
+    }
+
+    .c-bottom-drawer__overlay {
+      opacity: 0.3;
+      z-index: 5;
+    }
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color__black;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+  }
+
+  &__main {
+    max-height: 85%;
+    width: 100%;
+    background-color: $color__white;
+    border-radius: 15px 15px 0 0;
+    z-index: 6;
+    transition: transform .2s ease-in-out;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

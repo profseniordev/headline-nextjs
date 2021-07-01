@@ -1,0 +1,144 @@
+@import '../../../Core/Styles/index';
+
+$c: '.c-company-card';
+
+#{$c} {
+  width: 85%;
+  height: 100%;
+  padding: 50px 7.5% 30px;
+  margin-top: -50px;
+  background-color: $color__gold;
+
+  @include bp(medium) {
+    padding-top: 65px;
+    margin-top: -65px;
+  }
+
+  &__header-top {
+    width: 100%;
+
+    @include bp(medium) {
+      display: flex;
+      border-bottom: solid 1px $color__black;
+    }
+
+    @include bp(xlarge) {
+    }
+  }
+
+  &__logo-container {
+    width: 100%;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+
+    @include bp(medium) {
+      width: 52%;
+      margin-bottom: 0;
+    }
+
+    @include bp(large) {
+      width: 50%;
+    }
+  }
+
+  &__logo {
+    width: 60%;
+
+    @include bp(small) {
+      width: 35%;
+    }
+  }
+
+  &__external-link {
+    width: fit-content;
+    display: flex;
+    margin-left: 15px;
+    border-bottom: solid 1px $color__black;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-decoration: none;
+
+    svg {
+      width: 14.5px;
+      margin-left: 5px;
+      stroke: black;
+      stroke-width: 1;
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+      margin: 30px 0 20px;
+    }
+  }
+
+  &__header-blurb {
+    width: 100%;
+
+    @include bp(medium) {
+      width: 48%;
+    }
+
+    @include bp(large) {
+      max-width: 400px;
+    }
+
+    &.ty-body {
+      line-height: 1.5;
+      letter-spacing: 0.25px;
+    }
+  }
+
+  &__header-bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  &__text-block {
+    min-width: 100%;
+    margin-bottom: 30px;
+
+    @include bp(medium) {
+      min-width: calc(26% - 20px);
+      padding-right: 20px;
+      margin-bottom: 34px;
+    }
+
+    @include bp(large) {
+      min-width: calc(16.7% - 20px);
+    }
+
+    strong {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    p:nth-of-type(2) {
+      margin-top: 10px;
+
+      @include bp(medium) {
+        margin-top: 17px;
+      }
+    }
+
+    a {
+      color: $color__black;
+      text-decoration: none;
+      border-bottom: solid 1px $color__black;
+      padding-bottom: 4px;
+      transition: border-bottom-color .2s ease-in;
+
+      &:hover {
+        border-bottom: solid 1px transparent;
+        transition: border-bottom-color .2s ease-in;
+      }
+    }
+  }
+}

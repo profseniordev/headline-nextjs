@@ -1,0 +1,86 @@
+@import '../../Core/Styles/variables';
+
+$c: '.c-homepage-ticker';
+
+#{$c} {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  background-color: $color__canvas;
+  border: solid $color__black;
+  border-width: 1px 0;
+  overflow: hidden;
+
+  &__gradient-overlay {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    background: -webkit-linear-gradient(left, rgba(253,240,232,1) 5%, rgba(253,240,232,0) 10%, rgba(253,240,232,0) 95%, rgba(253,240,232,1) 100%);
+    background: -moz-linear-gradient(left, rgba(253,240,232,1) 5%, rgba(253,240,232,0) 10%, rgba(253,240,232,0) 95%, rgba(253,240,232,1) 100%);
+    background: -ms-linear-gradient(left, rgba(253,240,232,1) 5%, rgba(253,240,232,0) 10%, rgba(253,240,232,0) 95%, rgba(253,240,232,1) 100%);
+    background: -o-linear-gradient(left, rgba(253,240,232,1) 5%, rgba(253,240,232,0) 10%, rgba(253,240,232,0) 95%, rgba(253,240,232,1) 100%);
+    background: linear-gradient(left, rgba(253,240,232,1) 5%, rgba(253,240,232,0) 10%, rgba(253,240,232,0) 95%, rgba(253,240,232,1) 100%);
+    z-index: 2;
+  }
+
+  &__logo {
+    height: 28px;
+    z-index: 3;
+  }
+
+  &__logo-container {
+    padding: 0 60px 0 20px;
+    z-index: 2;
+  }
+
+  &__list-inner {
+    width: 100%;
+    display: flex;
+    animation: ticker linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-family: $font__roobert;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+
+    &:not(:last-of-type)::after {
+      content: '\2022';
+      width: 40px;
+      text-align: center;
+      font-size: 24px;
+      transition: opacity .2s ease-in;
+    }
+
+    em  {
+      font-style: italic;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}

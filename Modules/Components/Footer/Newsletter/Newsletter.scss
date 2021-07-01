@@ -1,0 +1,89 @@
+@import '../../../Core/Styles/index';
+
+$c: '.c-footer-newsletter';
+
+#{$c} {
+  width: 100%;
+  background-color: $color__orange;
+
+  @include bp(medium) {
+    width: 50%;
+    border-bottom: solid 1px $color__black;
+  }
+
+  &__inner {
+    width: 90%;
+    padding: 52px 5% 61px;
+
+    @include bp(medium) {
+      width: 80%;
+      max-width: 439px;
+      margin: 0 auto;
+      padding: 59px 10% 67px;
+    }
+  }
+
+  h3 {
+    width: 237px;
+    font-size: 39px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 36px;
+
+    @include bp(medium) {
+      width: unset;
+      font-size: 38px;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+    }
+  }
+
+  #footer__form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    @include bp(medium) {
+      flex-wrap: wrap;
+    }
+
+    input[type = email] {
+      color: $color__black;
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      padding: 19px 0;
+      margin-bottom: 38px;
+      line-height: 1.4;
+      border-bottom: solid 1px $color__black;
+
+      @include bp(medium) {
+        padding-right: 120px;
+        margin-bottom: 0;
+      }
+
+      &::placeholder {
+        color: $color__black;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 30px $color__orange inset !important;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 36px;
+
+      @include bp(medium) {
+        width: 110px;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+}

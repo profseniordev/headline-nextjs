@@ -1,0 +1,144 @@
+@import "../../../Core/Styles/variables.scss";
+
+.c-featured-article__main {
+  width: 100%;
+  height: 100%;
+}
+
+.c-featured-article__inner {
+  display: flex;
+  max-width: 97%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: $color__gold;
+
+  @include bp-down(medium) {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+.c-featured-article__content {
+  max-width: 95%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 2.5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  @include bp-down(medium) {
+    margin-top: 0;
+    top: 1.5%;
+  }
+}
+
+.c-featured-article__image-container {
+  padding-bottom: 66.66%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+  transition: opacity .2s ease-in-out;
+
+  @include bp-down(medium) {
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.c-featured-article__image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.c-featured-article__title {
+  font-family: $font__reckless;
+  font-size: 38px;
+  color: $color__black;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -.5px;
+  max-width: 498px;
+  margin-bottom: 20px;
+
+  @include bp-down(medium) {
+    font-size: 30px;
+    max-width: 100%;
+  }
+}
+
+.c-featured-article__summary {
+  font-family: $font__roobert;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(0,0,0,.7);
+  max-width: 524px;
+  margin-bottom: 37px;
+
+  @include bp-down(medium) {
+    max-width: 95%;
+    margin-bottom: 25px;
+  }
+}
+
+.c-featured-article__text-cta {
+  margin-bottom: 52px;
+
+  @include bp-down(medium) {
+    margin-bottom: 60px;
+    padding-bottom: 0;
+    line-height: 26px;
+  }
+
+  a {
+    max-height: 17px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: solid 1px $color__black;
+    transition: border .2s ease-in;
+
+    &:hover {
+      border-bottom-color: transparent;
+      transition: border .2s ease-in;
+    }
+  }
+
+  svg {
+    width: 12.5px;
+    margin-left: 10px;
+
+    path {
+      stroke-width: 1.5;
+    }
+  }
+}
+
+.c-featured-article__information {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-featured-article__link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .2s ease-in-out;
+
+  &:hover {
+    text-decoration-color: $color__black;
+  }
+}

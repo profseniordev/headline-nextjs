@@ -1,0 +1,340 @@
+// Add text style guide scss here, i.e. h1-h5 font definitions
+@import './variables.scss';
+
+// These all start with 'ty' for typography for autocompleting classnames when in html or jsx.
+.ty-h1 {
+  font-family: $font__reckless;
+  font-size: 39px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -1px;
+
+  @include bp(medium) {
+    font-size: 67px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+}
+
+.ty-h2 {
+  font-family: $font__reckless;
+  font-size: 31px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+
+  @include bp(medium) {
+    font-size: 50px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+  }
+}
+
+.ty-h2-alt {
+  font-family: $font__roobert;
+  font-size: 39px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -1px;
+
+  @include bp(medium) {
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+}
+
+.ty-h3 {
+  font-family: $font__reckless;
+  font-size: 31px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+
+  @include bp(medium) {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+}
+
+.ty-h4 {
+  font-family: $font__roobert;
+  font-size: 25px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.25px;
+
+  @include bp(medium) {
+    font-size: 28px;
+    letter-spacing: -0.4px;
+  }
+}
+
+.ty-h5 {
+  font-family: $font__roobert;
+  font-size: 25px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+
+  @include bp(medium) {
+    font-size: 21px;
+    line-height: 1.3;
+    letter-spacing: normal;
+  }
+}
+
+.ty-body {
+  font-family: $font__roobert;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+
+  &.bold {
+    font-weight: 500;
+  }
+}
+
+.ty-body2 {
+  font-family: $font__reckless;
+  font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.25px;
+
+  &.body1-font-size {
+    font-size: 16px;
+
+    @include bp(medium) {
+      font-size: 21px;
+    }
+  }
+}
+
+.ty-eyebrow {
+  font-family: $font__roobert;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+
+  @include bp(medium) {
+    font-size: 11px;
+  }
+}
+
+.ty-link {
+  font-family: $font__roobert;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: 0.1px;
+  color: inherit;
+
+  &.normal {
+    font-weight: normal;
+  }
+}
+
+p a {
+  color: inherit;
+  text-decoration: none;
+  transition: border .2s ease-in;
+  border-bottom: solid 1px $color__black;
+  padding-bottom: 4px;
+
+  &:hover {
+    border-bottom: solid 1px transparent;
+    transition: border .2s ease-in;
+  }
+}
+
+.ty-caption {
+  font-family: $font__roobert;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+
+  &.bold {
+    font-weight: 500;
+  }
+}
+
+.button-primary {
+  font-family: $font__roobert;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.3;
+  color: $color__black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 2px;
+  border: none;
+  background-color: $color__green;
+  transition: background-color .2s ease-in, color .2s ease-in;
+
+  &:hover {
+    background-color: $color__darkgreen;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-secondary {
+  @extend .button-primary;
+  color: $color__black;
+  background-color: $color__white;
+  border: solid 1px $color__black;
+
+  &:hover {
+    color: $color__white;
+    background-color: $color__black;
+  }
+}
+
+.button-primary-accent {
+  @extend .button-primary;
+  color: $color__white;
+  background-color: $color__black;
+
+  &:hover {
+    color: $color__gold;
+    background-color: $color__black;
+  }
+}
+
+.text-Black,
+.text-hover-Black:hover {
+  color: $color__black;
+  transition: color .2s ease-in;
+}
+
+.text-Blue,
+.text-hover-Blue:hover {
+  color: $color__blue;
+  transition: color .2s ease-in;
+}
+
+.text-Canvas,
+.text-hover-Canvas:hover {
+  color: $color__canvas;
+  transition: color .2s ease-in;
+}
+
+.text-Concrete,
+.text-hover-Concrete:hover {
+  color: $color__concrete;
+  transition: color .2s ease-in;
+}
+
+.text-Gold,
+.text-hover-Gold:hover {
+  color: $color__gold;
+  transition: color .2s ease-in;
+}
+
+.text-Green,
+.text-hover-Green:hover {
+  color: $color__green;
+  transition: color .2s ease-in;
+}
+
+.text-Orange,
+.text-hover-Orange:hover {
+  color: $color__orange;
+  transition: color .2s ease-in;
+}
+
+.text-White,
+.text-hover-White:hover {
+  color: $color__white;
+  transition: color .2s ease-in;
+}
+
+.text-Yellow,
+.text-hover-Yellow:hover {
+  color: $color__yellow;
+  transition: color .2s ease-in;
+}
+
+.background-Black,
+.background-hover-Black:hover {
+  background-color: $color__black;
+}
+
+.background-Blue,
+.background-hover-Blue:hover {
+  background-color: $color__blue;
+}
+
+.background-Canvas,
+.background-hover-Canvas:hover {
+  background-color: $color__canvas;
+}
+
+.background-Concrete,
+.background-hover-Concrete:hover {
+  background-color: $color__concrete;
+}
+
+.background-Gold,
+.background-hover-Gold:hover {
+  background-color: $color__gold;
+}
+
+.background-Green,
+.background-hover-Green:hover {
+  background-color: $color__green;
+}
+
+.background-Orange,
+.background-hover-Orange:hover {
+  background-color: $color__orange;
+}
+
+.background-White,
+.background-hover-White:hover {
+  background-color: $color__white;
+}
+
+.background-Yellow,
+.background-hover-Yellow:hover {
+  background-color: $color__yellow;
+}

@@ -1,0 +1,75 @@
+@import '../../../../Core/Styles/index';
+
+$c: '.c-company-card-text-image';
+
+#{$c} {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include bp(medium) {
+    align-items: flex-end;
+  }
+
+  @include bp(large) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  &__image-caption-container {
+    padding: 8px 0 30px;
+
+    @include bp(medium) {
+      width: fit-content;
+      margin: 0 auto;
+      padding-bottom: 5%;
+      position: relative;
+    }
+
+    @include bp(large) {
+      padding-bottom: 10%;
+      margin-right: 0;
+    }
+  }
+
+  &__image-container {
+
+    @include bp(medium) {
+      width: fit-content;
+      max-height: 475px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    object-fit: contain;
+
+    @include bp(medium) {
+      max-height: 475px;
+    }
+  }
+
+  &__caption {
+    width: inherit;
+    padding-top: 10px;
+    color: $color__mediumgray4;
+
+    @include bp(medium) {
+      position: absolute;
+    }
+  }
+
+  &__text p {
+    margin: 0 0 30px;
+
+    @include bp(medium) {
+      margin-bottom: 20px;
+    }
+
+    @include bp(large) {
+      margin-bottom: 30px;
+    }
+  }
+}

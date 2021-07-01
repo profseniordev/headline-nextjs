@@ -1,0 +1,28 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-listing-grid';
+
+#{$c} {
+  width: 100%;
+  padding-bottom: 11px;
+  background-color: $color__white;
+
+  &__button {
+    margin: 60px auto 89px;
+  }
+
+  &__no-results-container {
+    padding: 200px 0 100px;
+    text-align: center;
+    color: $color__black;
+    display: none;
+
+    @include bp(medium) {
+      padding: 300px 0 200px;
+    }
+
+    &.is-visible {
+      display: block;
+    }
+  }
+}

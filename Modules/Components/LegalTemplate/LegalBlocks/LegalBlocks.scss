@@ -1,0 +1,75 @@
+@import '../../../Core/Styles/index';
+
+.c-legal-block__main {
+  width: 100%;
+}
+
+.c-legal-block__title {
+  font-family: $font__roobert;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -.35px;
+  margin-bottom: 40px;
+
+  @include bp-down(medium) {
+    font-size: 21px;
+    line-height: 36px;
+    letter-spacing: -.4px;
+    margin-bottom: 20px;
+  }
+}
+
+.c-legal-block__text {
+  font-family: $font__roobert;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: .84px;
+  color: rgba(0,0,0,.6);
+  padding-bottom: 100px;
+  word-wrap:break-word;
+
+  p {
+    padding-bottom: 30px;
+  }
+
+  ul {
+    li {
+      padding-bottom: 40px;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 40px;
+
+    li {
+      padding-bottom: 10px;
+    }
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: $color__black;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  h4 {
+    font-family: $font__reckless;
+  }
+
+  @include bp-down(medium) {
+    font-size: 16px;
+    padding-bottom: 45px;
+  }
+}

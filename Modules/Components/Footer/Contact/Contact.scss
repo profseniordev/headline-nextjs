@@ -1,0 +1,80 @@
+@import '../../../Core/Styles/index';
+
+$c: '.c-footer-contact';
+
+#{$c} {
+  width: 100%;
+  background-color: $color__green;
+
+  @include bp(medium) {
+    width: 50%;
+  }
+
+  &__inner {
+    width: 90%;
+    padding: 40px 5% 35px;
+
+    @include bp(medium) {
+      width: 80%;
+      max-width: 439px;
+      margin: 0 auto;
+      padding: 60px 10% 23px;
+    }
+  }
+
+  h3 {
+    font-size: 39px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 34px;
+
+    @include bp(medium) {
+      font-size: 38px;
+      letter-spacing: -0.5px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__social-link {
+    margin: 40px 30px 40px 0;
+
+    @include bp(medium) {
+      margin: 34px 30px 50px 0;
+    }
+  }
+
+  &__link-container {
+    margin-top: 40px;
+
+    @include bp(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+  }
+
+  &__text-link-container {
+    margin-bottom: 25px;
+
+    @include bp(medium) {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+
+    p a {
+      padding-bottom: 0;
+    }
+  }
+
+  &__text-link-heading {
+    margin-bottom: 5px;
+  }
+
+  &__text-link p {
+    font-size: 16px;
+
+    @include bp(medium) {
+      font-size: 13px;
+    }
+  }
+}

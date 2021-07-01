@@ -1,0 +1,18 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-portfolio';
+
+#{$c} {
+
+  .grid-sizer {
+    width: calc(25% - 2px);
+  }
+
+  .c-grid__block {
+
+    @include bp(full) {
+      width: calc(25% - 2px);
+      padding-top: calc(18.75%);
+    }
+  }
+}

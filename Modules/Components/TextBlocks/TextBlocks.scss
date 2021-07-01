@@ -1,0 +1,69 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-text-blocks';
+
+#{$c} {
+
+  &__block-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-family: $font__roobert;
+    font-size: 31px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    margin-bottom: 15px;
+
+    @include bp(medium) {
+      font-size: 38px;
+      letter-spacing: -0.25px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    padding-bottom: 65px;
+
+    @include bp(medium) {
+      width: 49%;
+      padding-right: 1%;
+    }
+
+    @include bp(large) {
+      width: 32.3%;
+      padding-bottom: 97px;
+    }
+  }
+
+  &__text {
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      padding-bottom: 4px;
+      border-bottom: solid 1px $color__black;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  &__additional-container {
+    margin-top: 20px;
+
+    .c-text-blocks__block {
+      padding-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../../Core/Styles/index';
+
+$c: '.c-footer-locations';
+
+#{$c} {
+  width: 100%;
+  padding: 25px 0 54px;
+  border: solid $color__black;
+  border-width: 1px 0;
+  background-color: $color__canvas;
+
+  @include bp(medium) {
+    width: calc(50% - 1px);
+    padding: 34px 0 90px;
+    border-width: 0 0 0 1px;
+    order: 1;
+    position: absolute;
+    right: 0;
+  }
+
+  &__location-container {
+    width: 90%;
+    max-height: 42px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 12px 0 16px;
+    border-bottom: solid 1px $color__lightgray3;
+    cursor: pointer;
+    transition: max-height .2s ease-in;
+
+    @include bp(medium) {
+      width: 80%;
+      max-width: 439px;
+    }
+
+    &.is-open {
+      max-height: 200px;
+    }
+  }
+
+  h3 {
+    font-size: 39px;
+  }
+
+  &__body {
+    margin: 15px 0 14px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: border .2s ease-in;
+      border-bottom: solid 1px $color__black;
+      padding-bottom: 4px;
+
+      &:hover {
+        border-bottom: solid 1px transparent;
+        transition: border .2s ease-in;
+      }
+    }
+  }
+}

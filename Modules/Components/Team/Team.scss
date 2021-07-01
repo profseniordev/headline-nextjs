@@ -1,0 +1,70 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-team';
+
+#{$c} {
+
+  &-listing-grid__main {
+
+    .c-grid {
+
+      .grid-sizer {
+        width: 25%;
+      }
+
+      &__block {
+        width: calc(50% - 2px);
+        padding-top: calc(50% + 78px);
+
+        @include bp(large) {
+          width: calc(25% - 2px);
+          padding-top: calc(25% + 78px);
+        }
+      }
+
+      &__block-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      &__text-container {
+        width: calc(100% - 20px);
+        background-color: $color__white;
+        border-top: solid 1px $color__black;
+        padding: 10px;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+      }
+
+      &__text {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      &__subtext {
+      }
+
+      &__logo-container {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .c-listing-grid {
+    padding-bottom: 10px;
+
+    &__no-results-container {
+      padding: 200px 0;
+
+      @include bp(medium) {
+        padding: 300px 0;
+      }
+    }
+  }
+}

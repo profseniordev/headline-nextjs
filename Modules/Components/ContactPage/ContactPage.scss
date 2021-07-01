@@ -1,0 +1,54 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-contact';
+
+#{$c} {
+  width: 100%;
+  background-color: $color__green;
+  padding: 110px 0 100px;
+
+  @include bp(medium) {
+    width: 90%;
+    padding: 120px 5% 95px;
+  }
+
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 60px;
+    position: relative;
+
+    @include bp(medium) {
+      margin-bottom: 120px;
+    }
+  }
+
+
+  &__heading {
+    width: fit-content;
+    line-height: 1;
+    margin: 0;
+    font-size: 48px;
+
+    @include bp(medium) {
+      line-height: .8;
+      font-size: 67px;
+    }
+
+    h1 {
+      width: fit-content;
+    }
+  }
+
+  &__border {
+    width: 100%;
+    height: 14px;
+    background: url('../../../static/assets/halftone-white-small.svg');
+    margin-top: -14px;
+  }
+}

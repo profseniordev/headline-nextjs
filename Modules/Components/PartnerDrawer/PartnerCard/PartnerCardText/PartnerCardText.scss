@@ -1,0 +1,40 @@
+@import '../../../../Core/Styles/index';
+
+$c: '.c-partner-card-text';
+
+#{$c} {
+
+  @include bp(large) {
+    padding-left: 20%;
+  }
+
+  &__container {
+    margin-bottom: 30px;
+
+    @include bp(medium) {
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    strong {
+      font-family: $font__roobert;
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+      opacity: 0.5;
+    }
+  }
+
+  &__heading {
+    margin: 0 0 30px;
+
+    @include bp(large) {
+      margin-bottom: 50px;
+    }
+  }
+}

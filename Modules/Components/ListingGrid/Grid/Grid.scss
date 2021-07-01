@@ -1,0 +1,72 @@
+@import '../../../Core/Styles/index';
+
+$c: '.c-grid';
+
+#{$c} {
+  width: calc(100% + 12px);
+  margin: 0 0 0 -1px;
+  
+  .grid-sizer {
+    width: 50%;
+
+    @include bp(medium) {
+      width: 33.3%;
+    }
+  }
+
+  &__block {
+    width: 50%;
+    padding-top: 37.5%;
+    position: relative;
+    transition: all .2s ease-in;
+
+    @include bp(medium) {
+      width: calc(33.3% - 2px);
+      padding-top: calc(25%);
+    }
+  }
+
+  &__block-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: solid 1px $color__black;
+    margin-left: -1px;
+    margin-top: -1px;
+  }
+
+  &__logo {
+    object-fit: contain;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+  }
+
+  &__text-container {
+    width: 90%;
+    position: absolute;
+    padding: 3% 5%;
+    bottom: 0;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    color: $color__black;
+    text-decoration: none;
+
+    svg {
+      height: 12px;
+    }
+  }
+}

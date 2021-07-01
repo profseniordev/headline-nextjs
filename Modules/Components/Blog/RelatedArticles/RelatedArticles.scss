@@ -1,0 +1,122 @@
+@import "../../../Core/Styles/variables.scss";
+
+.c-related-articles__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-related-articles__inner {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include bp-down(xlarge) {
+    margin: 0 3%;
+    max-width: 80%;
+  }
+
+  @include bp-down(medium) {
+    justify-content: center;
+    max-width: 100%;
+  }
+}
+
+.c-related-articles__columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  width: 100%;
+
+  .c-blog__column {
+    align-items: center;
+
+    @include bp-down(medium) {
+      max-width: 100%;
+    }
+  }
+
+  @include bp-down(medium) {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.c-related-articles__title {
+  font-family: $font__reckless;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -.75px;
+  color: $color__black;
+  padding: 100px 0 60px 0;
+
+  @include bp-down(medium) {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -.5px;
+    padding: 60px 0 40px 0;
+  }
+}
+
+.c-related-articles__article-image-container {
+  padding-bottom: 66.66%;
+  position: relative;
+  transition: opacity .2s ease-in-out;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.c-related-articles__article-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.c-related-articles__article-title {
+  font-family: $font__reckless;
+  font-size: 21px;
+  line-height: 30px;
+  letter-spacing: -.25px;
+  color: $color__black;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.c-related-articles__article-excerpt {
+  font-family: $font__roobert;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .75px;
+  padding-bottom: 16px;
+  color: rgba(0,0,0,.6);
+}
+
+.c-related-articles__article-date {
+  font-family: $font__roobert;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: .75px;
+  padding-bottom: 20px;
+  color: #868aa2;
+}
+
+.c-related-articles__article-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .2s ease-in-out;
+
+  &:hover {
+    text-decoration-color: $color__black;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../../Core/Styles/variables.scss";
+
+.c-article-list__main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include bp-down(medium) {
+    justify-content: center;
+  }
+}
+
+.c-article-list__inner {
+  max-width: 90%;
+  width: 100%;
+  height: 100%;
+
+  @include bp-down(medium) {
+    max-width: 95%;
+  }
+}
+
+.c-article-list__title {
+  font-family: $font__reckless;
+  font-size: 39px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: $color__black;
+  padding-bottom: 30px;
+}
+
+.c-article-list__articles-container {
+  width: 100%;
+  height: auto;
+}
+
+.c-article-list__article-container {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(0,0,0,.25);
+}
+
+.c-article-list__article-image-container {
+  padding-bottom: 66.66%;
+  position: relative;
+  transition: opacity .2s ease-in-out;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.c-article-list__article-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.c-article-list__article-title {
+  font-family: $font__roobert;
+  font-size: 25px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  color: $color__black;
+  margin-top: 30px;
+  padding-bottom: 20px;
+
+  @include bp-down(medium) {
+    margin-top: 10px;
+    padding-bottom: 15px;
+  }
+}
+
+.c-article-list__article-excerpt {
+  font-family: $font__roobert;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  padding-bottom: 16px;
+  color: rgba(0,0,0,.7);
+}
+
+.c-article-list__article-date {
+  font-family: $font__roobert;
+  padding-bottom: 20px;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.c-article-list__article-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .2s ease-in-out;
+
+  &:hover {
+    text-decoration-color: $color__black;
+  }
+}

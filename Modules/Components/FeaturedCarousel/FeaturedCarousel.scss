@@ -1,0 +1,119 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-featured-carousel';
+
+#{$c} {
+  width: 100%;
+  background-color: $color__white;
+  border-bottom: solid 1px $color__black;
+
+  &__header {
+    display: none;
+
+    @include bp(medium) {
+      display: block;
+      width: 100%;
+      padding: 15px 0 19px;
+      border-bottom: solid 1px $color__black;
+      font-size: 21px;
+    }
+
+    @include bp(large) {
+      padding: 16px 0 20px;
+      font-size: 28px;
+    }
+  }
+
+  &__heading {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  &__main {
+    display: flex;
+    align-items: flex-start;
+
+    @include bp(medium) {
+      max-height: 670px;
+      padding: 50px 0 59px;
+    }
+  }
+
+  &__column-small {
+    display: none;
+
+    @include bp(medium) {
+      display: block;
+      width: 42%;
+    }
+
+    @include bp(large) {
+      width: 37%;
+    }
+  }
+
+  &__item-container {
+    height: auto;
+    max-height: 43px;
+    margin: 0 20px 0 50px;
+    padding: 8px 0 15px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: max-height .4s ease-in-out, opacity .4s ease-in-out;
+
+    @include bp(medium) {
+      margin: 0 20px;
+    }
+
+    @include bp(large) {
+      margin: 0 72px 0 50px;
+    }
+
+    &.is-open {
+      max-height: 400px;
+      opacity: 1;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: solid 1px $color__black;
+    }
+
+    .button-primary {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 14px;
+    }
+
+    .icon-arrow {
+      width: 13px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+
+    @include bp(large) {
+      font-size: 38px;
+    }
+  }
+
+  &__description {
+    margin: 17px 0 20px;
+  }
+
+  &__column-large {
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    @include bp(medium) {
+      width: 58%;
+    }
+
+    @include bp(large) {
+      width: 63%;
+    }
+  }
+
+}

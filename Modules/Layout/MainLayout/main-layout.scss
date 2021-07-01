@@ -1,0 +1,14 @@
+@import '../../Core/Styles/variables';
+
+$c: '.c-main-layout';
+
+#{$c} {
+  width: 100%;
+  overflow: hidden;
+  background-color: $color__canvas;
+  position: relative;
+
+  *::selection {
+    background: $color__green;
+  }
+}

@@ -1,0 +1,134 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-title-text-hero';
+
+#{$c} {
+  padding-top: 110px;
+
+  @include bp(medium) {
+    padding-top: 100px;
+  }
+
+  &__main {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 137px;
+    position: relative;
+
+    @include bp(medium) {
+      width: 75%;
+      max-width: 1280px;
+      margin-left: 10%;
+      padding-bottom: 89px;
+    }
+
+    @include bp(full) {
+      margin: 0 auto;
+    }
+  }
+
+  &__heading {
+    max-width: 896px;
+    z-index: 200;
+
+    @include bp(medium) {
+      font-size: 67px;
+    }
+
+    &-container {
+      position: relative;
+      z-index: 0;
+    }
+
+    &-halftone-container {
+      position: absolute;
+      display: flex;
+      align-items: flex-end;
+      z-index: -1;
+      top: -1px;
+
+      @include bp(medium) {
+        top: 1px;
+      }
+
+      .c-halftone-border {
+        border: none;
+        height: 11px;
+
+        @include bp(medium) {
+          height: 21px;
+        }
+      }
+    }
+  }
+
+  &__description {
+
+    @include bp(medium) {
+      max-width: 433px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    &-container {
+      width: 100%;
+      max-height: 157px;
+      overflow: hidden;
+      margin: 30px 0;
+      position: relative;
+      transition: max-height .2s ease-in;
+      display: flex;
+
+      @include bp(medium) {
+        max-height: unset;
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      &.is-open {
+        max-height: 100%;
+        margin-bottom: 0;
+      }
+
+      &-overlay {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(253, 233, 232, 0.19), $color__canvas);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: opacity .2s ease-in;
+
+        &.is-open {
+          opacity: 0;
+        }
+
+        @include bp(medium) {
+          display: none;
+        }
+      }
+
+      &-expand-button {
+        width: fit-content;
+        display: block;
+        padding: 0 0 4px;
+        margin: 0 auto;
+        background: transparent;
+        border:  solid $color__black;
+        border-width: 0 0 1px 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+
+        @include bp(medium) {
+          display: none;
+        }
+      }
+    }
+  }
+}

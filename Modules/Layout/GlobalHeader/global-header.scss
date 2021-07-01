@@ -1,0 +1,19 @@
+@import '../../Core/Styles/variables';
+
+$c: '.c-global-header';
+
+#{$c} {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 4;
+
+  @include bp(medium) {
+    height: 60px;
+    justify-content: center;
+  }
+}

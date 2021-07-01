@@ -1,0 +1,111 @@
+@import "../../../Core/Styles/variables.scss";
+
+.c-search-results__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include bp-down(medium) {
+    margin-top: 20px;
+  }
+}
+
+.c-search-results__inner {
+  width: 90%;
+  margin: 0 auto;
+
+  @include bp-down(medium) {
+    max-width: 95%;
+  }
+}
+
+.c-search-results__eyebrow {
+  font-family: $font__roobert;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: .75px;
+  color: #868aa2;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include bp-down(medium) {
+    height: 78px;
+  }
+}
+
+.c-search-results__results {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 68px;
+
+  @include bp-down(medium) {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
+
+.c-search-results__article {
+  width: 100%;
+}
+
+.c-search-results__article-image-container {
+  padding-bottom: 66.66%;
+  position: relative;
+  transition: opacity .2s ease-in-out;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.c-search-results__article-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.c-search-results__article-title {
+  font-family: $font__roobert;
+  font-size: 21px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  color: $color__black;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.c-search-results__article-excerpt {
+  font-family: $font__roobert;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .75px;
+  padding-bottom: 16px;
+  color: rgba(0,0,0,.6);
+}
+
+.c-search-results__article-date {
+  font-family: $font__roobert;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: .75px;
+  padding-bottom: 20px;
+  color: #868aa2;
+}
+
+.c-search-results__article-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .2s ease-in-out;
+
+  &:hover {
+    text-decoration-color: $color__black;
+  }
+}

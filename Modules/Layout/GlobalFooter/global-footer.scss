@@ -1,0 +1,10 @@
+@import '../../Core/Styles/variables';
+
+$c: '.c-global-footer';
+
+#{$c} {
+  width: 100%;
+
+  @include bp(medium) {
+  }
+}

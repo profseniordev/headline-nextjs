@@ -1,0 +1,155 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-halftone-border';
+
+#{$c} {
+
+  &.border-row {
+    width: 101%;
+    height: 11px;
+    margin: 0 auto;
+    display: flex;
+    border: solid $color__black;
+    border-width: 1px 0;
+
+    .halftone-small {
+      width: 33.3%;
+    }
+
+    .halftone-medium {
+      width: 33.3%;
+    }
+
+    .halftone-large {
+      width: 33.3%;
+    }
+  }
+
+  &.border-column {
+    width: 100%;
+    height: 100%;
+
+    .halftone-small {
+      width: 100%;
+      height: 33.3%;
+    }
+
+    .halftone-medium {
+      width: 100%;
+      height: 33.3%;
+    }
+
+    .halftone-large {
+      width: 100%;
+      height: 33.3%;
+    }
+  }
+
+  .halftone-small-Black {
+    background: url('../../../static/assets/halftone-black-small.svg');
+  }
+
+  .halftone-medium-Black {
+    background: url('../../../static/assets/halftone-black-medium.svg');
+  }
+
+  .halftone-large-Black {
+    background: url('../../../static/assets/halftone-black-large.svg');
+  }
+
+  .halftone-small-Blue {
+    background: url('../../../static/assets/halftone-blue-small.svg');
+  }
+
+  .halftone-medium-Blue {
+    background: url('../../../static/assets/halftone-blue-medium.svg');
+  }
+
+  .halftone-large-Blue {
+    background: url('../../../static/assets/halftone-blue-large.svg');
+  }
+
+  .halftone-small-Canvas {
+    background: url('../../../static/assets/halftone-canvas-small.svg');
+  }
+
+  .halftone-medium-Canvas {
+    background: url('../../../static/assets/halftone-canvas-medium.svg');
+  }
+
+  .halftone-large-Canvas {
+    background: url('../../../static/assets/halftone-canvas-large.svg');
+  }
+
+  .halftone-small-Concrete {
+    background: url('../../../static/assets/halftone-concrete-small.svg');
+  }
+
+  .halftone-medium-Concrete {
+    background: url('../../../static/assets/halftone-concrete-medium.svg');
+  }
+
+  .halftone-large-Concrete {
+    background: url('../../../static/assets/halftone-concrete-large.svg');
+  }
+
+  .halftone-small-Gold {
+    background: url('../../../static/assets/halftone-gold-small.svg');
+  }
+
+  .halftone-medium-Gold {
+    background: url('../../../static/assets/halftone-gold-medium.svg');
+  }
+
+  .halftone-large-Gold {
+    background: url('../../../static/assets/halftone-gold-large.svg');
+  }
+
+  .halftone-small-Green {
+    background: url('../../../static/assets/halftone-green-small.svg');
+  }
+
+  .halftone-medium-Green {
+    background: url('../../../static/assets/halftone-green-medium.svg');
+  }
+
+  .halftone-large-Green {
+    background: url('../../../static/assets/halftone-green-large.svg');
+  }
+
+  .halftone-small-Orange {
+    background: url('../../../static/assets/halftone-orange-small.svg');
+  }
+
+  .halftone-medium-Orange {
+    background: url('../../../static/assets/halftone-orange-medium.svg');
+  }
+
+  .halftone-large-Orange {
+    background: url('../../../static/assets/halftone-orange-large.svg');
+  }
+
+  .halftone-small-White {
+    background: url('../../../static/assets/halftone-white-small.svg');
+  }
+
+  .halftone-medium-White {
+    background: url('../../../static/assets/halftone-white-medium.svg');
+  }
+
+  .halftone-large-White {
+    background: url('../../../static/assets/halftone-white-large.svg');
+  }
+
+  .halftone-small-Yellow {
+    background: url('../../../static/assets/halftone-yellow-small.svg');
+  }
+
+  .halftone-medium-Yellow {
+    background: url('../../../static/assets/halftone-yellow-medium.svg');
+  }
+
+  .halftone-large-Yellow {
+    background: url('../../../static/assets/halftone-yellow-large.svg');
+  }
+}

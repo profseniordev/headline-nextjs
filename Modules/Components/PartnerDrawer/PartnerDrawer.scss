@@ -1,0 +1,13 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-partner-drawer';
+
+#{$c} {
+
+  .c-bottom-drawer {
+
+    &__main {
+      overflow-y: auto;
+    }
+  }
+}

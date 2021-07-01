@@ -1,0 +1,55 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-card-quote';
+
+#{$c} {
+  width: 100%;
+  display: flex;
+  margin: 30px 0 30px;
+
+  @include bp(medium) {
+    justify-content: flex-end;
+  }
+
+  &__halftone-column {
+    width: 20px;
+    padding-right: 0;
+    margin-right: 11px;
+
+    @include bp(medium) {
+      width: 11px;
+    }
+  }
+
+  &__halftone-container {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+
+    @include bp(medium) {
+      width: 11px;
+    }
+  }
+
+  &__quote {
+    position: relative;
+
+    p {
+      font-size: 25px;
+
+      @include bp(medium) {
+        font-size: 38px;
+      }
+    }
+  }
+
+  &__floating-quotation-mark {
+    position: absolute;
+    left: -17px;
+
+    @include bp(medium) {
+      left: -20px;
+    }
+  }
+}

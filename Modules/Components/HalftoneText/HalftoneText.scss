@@ -1,0 +1,69 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-halftone-text';
+
+#{$c} {
+
+  &__halftone-Black {
+    background-image: url('../../../static/assets/halftone-black-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-Blue {
+    background-image: url('../../../static/assets/halftone-blue-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-Canvas {
+    background-image: url('../../../static/assets/halftone-canvas-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-Concrete {
+    background-image: url('../../../static/assets/halftone-concrete-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-Gold {
+    background-image: url('../../../static/assets/halftone-gold-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-Green {
+    background-image: url('../../../static/assets/halftone-green-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-Orange {
+    background-image: url('../../../static/assets/halftone-orange-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-White {
+    background-image: url('../../../static/assets/halftone-white-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+
+  &__halftone-Yellow {
+    background-image: url('../../../static/assets/halftone-yellow-small.svg');
+    background-size: auto 10px;
+    background-repeat: repeat-x;
+    background-position: 50% 82%;
+  }
+}

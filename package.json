@@ -1,0 +1,30 @@
+{
+  "name": "create-next-example-app",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "vars": "node server-env-reg.js"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "body-scroll-lock": "^3.1.5",
+    "dotenv": "^8.2.0",
+    "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
+    "moment": "^2.29.1",
+    "next": "^9.0.2",
+    "node-sass": "^4.13.1",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.2.0",
+    "prismic-reactjs": "^1.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-js-pagination": "^3.0.3",
+    "react-slick": "^0.27.11",
+    "url-loader": "^4.1.1",
+    "url-search-params-polyfill": "^8.1.0"
+  }
+}

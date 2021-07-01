@@ -1,0 +1,210 @@
+@import '../../../Core/Styles/index';
+
+$c: '.c-filter';
+
+#{$c} {
+  width: 100%;
+  background-color: $color__white;
+
+  &__header {
+    width: 100%;
+    padding: 15px 0 19px;
+    border-bottom: solid 1px $color__black;
+    font-size: 21px;
+    max-height: 34px;
+    overflow: hidden;
+    transition: max-height .2s ease-in-out;
+    z-index: 1;
+
+    @include bp(large) {
+      padding: 16px 0 20px;
+      font-size: 28px;
+    }
+
+    &.is-open {
+
+      @include bp(medium) {
+        max-height: 2000px;
+
+        .c-filter__main-heading {
+          opacity: 0;
+          max-width: 0;
+        }
+
+        .c-filter__filter-header {
+          max-width: 3000px;
+          justify-content: space-between;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  &__filter {
+    &-header {
+      width: 100%;
+      max-width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: $color__white;
+
+      @include bp(medium) {
+        max-width: 150px;
+      }
+
+      svg {
+        height: 32px;
+      }
+    }
+
+    &-heading {
+      margin-right: 20px;
+    }
+
+    &-main {
+      width: 90%;
+      margin: 30px auto 60px;
+      display: none;
+      justify-content: flex-start;
+
+      @include bp(medium) {
+        display: flex;
+        justify-content: center;
+      }
+
+      &-sections {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &-mobile {
+      height: calc(100% - 79px - 95px);
+      padding: 79px 0 95px;
+
+      &-header-container {
+        width: 100%;
+        position: fixed;
+        top: 0;
+      }
+
+      &-header {
+        width: 90%;
+        max-width: unset;
+        margin: 0 auto;
+        padding: 21px 0 17px;
+        justify-content: space-between;
+        cursor: pointer;
+
+        svg {
+          height: 20px;
+        }
+      }
+
+      &-main {
+        width: 90%;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 19px 5% 0;
+        margin-top: 0;
+      }
+
+      .c-filter__section-heading {
+        margin-bottom: 20px;
+      }
+
+      .c-filter__button-container {
+        width: 90%;
+        display: flex;
+        background-color: $color__white;
+        justify-content: space-between;
+        padding: 21px 5% 11px;
+        position: fixed;
+        bottom: 0;
+
+        button {
+          width: 48%;
+          height: 44px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__header-inner {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__main-heading {
+    max-width: 3000px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: opacity .2s ease-in-out;
+  }
+
+  &__section-heading {
+    margin-bottom: 28.5px;
+  }
+
+  &__section-container {
+    margin-bottom: 40px;
+
+    @include bp(medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button-container {
+
+    button {
+      margin-bottom: 20px;
+
+      @include bp(medium) {
+        width: 150px;
+      }
+
+      @include bp(large) {
+        width: 200px;
+      }
+    }
+  }
+
+  &__tag-container{
+    display: flex;
+    align-items: center;
+    margin: 18.5px 0;
+    cursor: pointer;
+  }
+
+  &__tag-selector {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    border: solid 1px $color__black;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .c-bottom-drawer {
+
+    @include bp(medium) {
+      display: none;
+    }
+
+    &__main {
+      position: relative;
+      height: 100%;
+    }
+  }
+}

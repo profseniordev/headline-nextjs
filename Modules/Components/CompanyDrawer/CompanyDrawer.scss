@@ -1,0 +1,52 @@
+@import '../../Core/Styles/index';
+
+$c: '.c-company-drawer';
+
+#{$c} {
+
+  &__close {
+    width: 85%;
+    background-color: $color__gold;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 7.5% 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    z-index: 2;
+
+    @include bp(medium) {
+      padding: 30px 7.5% 10px;
+    }
+
+    svg {
+      width: 20px;
+
+      @include bp(medium) {
+        width: 24px;
+      }
+    }
+  }
+
+  &__main-container {
+    max-height: 85vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .c-bottom-drawer {
+
+    &__main {
+      overflow: hidden;
+      position: relative;
+      background-color: $color__gold;
+    }
+  }
+}
